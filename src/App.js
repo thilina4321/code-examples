@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function App() {
   const [id, setId] = useState("");
+  const [name, setName] = useState("");
   const dropdown = [
     { id: 1, title: "one" },
     { id: 2, title: "two" },
@@ -11,7 +12,10 @@ function App() {
   ];
 
   const onGetId = (e) => {
-    setId(e.target.value);
+    const id = e.target.value;
+    setId(id);
+    const findItem = dropdown.find((d) => d.id === +id);
+    setName(findItem.title);
   };
 
   return (
@@ -24,6 +28,7 @@ function App() {
         ))}
       </select>
       {id && <p> Id : {id} </p>}
+      {name && <p> Name : {name} </p>}
     </div>
   );
 }
