@@ -7,10 +7,12 @@ import Style1 from "./components/Style1";
 import Counter from "./Counter";
 import store from "./store";
 import { Provider } from "react-redux";
+import ViewOne from "./ViewOne";
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Counter />
-  </Provider>,
+  // <Provider store={store}>
+  //   <Counter />
+  // </Provider>,
+  <ViewOne />,
   document.getElementById("root")
 );
