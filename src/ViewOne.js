@@ -10,7 +10,7 @@ const ViewOne = () => {
       setView2((prev) => [...prev, value]);
     });
   }, []);
-
+ 
   view2.length !== 0 && console.log("View One", view1);
   view2.length !== 0 && console.log("View Two", view2);
 
