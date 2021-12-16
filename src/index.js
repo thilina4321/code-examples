@@ -8,11 +8,13 @@ import Counter from "./Counter";
 import store from "./store";
 import { Provider } from "react-redux";
 import ViewOne from "./ViewOne";
+import AsyncArray from "./components/AsyncArray";
 
 ReactDOM.render(
   // <Provider store={store}>
   //   <Counter />
   // </Provider>,
-  <ViewOne />,
+  // <ViewOne />,
+  <AsyncArray />,
   document.getElementById("root")
 );
