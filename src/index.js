@@ -10,5 +10,7 @@ import "./index.css";
 // import ViewOne from "./ViewOne";
 // import AsyncArray from "./components/AsyncArray";
 import Example from "./animations/Refresh";
+import A from "./Data";
 
-ReactDOM.render(<Example />, document.getElementById("root"));
+
+ReactDOM.render(<A />, document.getElementById("root"));
