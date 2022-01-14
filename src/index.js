@@ -13,6 +13,7 @@ import "./footer/Footer.module.css"
 import Example from "./animations/Refresh";
 import A from "./Data";
 import Footer from './footer/Footer'
+import OneSignal from './one-signal/OneSignal'
 
 
-ReactDOM.render(<Footer />, document.getElementById("root"));
+ReactDOM.render(<OneSignal />, document.getElementById("root"));
