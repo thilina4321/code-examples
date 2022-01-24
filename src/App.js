@@ -1,6 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const App = () => {
+  useEffect(() => {
+    fetch(
+      "https://qjgw0y2t09.execute-api.us-east-1.amazonaws.com/metadata?index=6317"
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
   // javascript
   const [names, setNames] = useState([{ name: "saman" }, { name: "kamal" }]);
   const [customName, setcustomName] = useState("");
