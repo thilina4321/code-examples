@@ -1,0 +1,78 @@
+.main_layout {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.side {
+  flex: 0.25;
+}
+
+.content {
+  flex: 0.75;
+}
+
+@media (max-width: 950px) {
+  .main_layout {
+    display: block;
+  }
+
+  .side {
+    display: none;
+  }
+
+  .content {
+    display: block;
+  }
+}
+
+.main_slider {
+  background-color: rgb(62, 62, 153);
+  color: white;
+  padding: 0.5rem;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.sub_name{
+  background-color: rgb(117, 103, 240);
+  padding: 0.2rem 0.8rem;
+  margin-left: 1rem;
+  border-radius: 20px;
+}
+
+.active {
+  color: orange;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.inactive {
+  color: white;
+  text-decoration: none;
+}
+
+.inactive:hover {
+  color: black;
+  transform: scale(1.3);
+  text-decoration: none;
+}
+
+.main_element {
+  cursor: pointer;
+  background-color: rgb(137, 139, 233);
+  border-radius: 30px;
+  padding: 5px;
+  text-align: center;
+}
+
+.main_element:hover {
+  background-color: white;
+  color: rgb(137, 139, 233);
+}
+
+.mobile_sidebar {
+  z-index: 2;
+  width: 80%;
+}

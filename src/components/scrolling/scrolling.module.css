@@ -1,0 +1,8 @@
+.section{
+    max-height: 200px;
+    overflow: auto;
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+
+}

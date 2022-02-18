@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-import Hello from "./App";
+import MainRouter from "./MainRouter";
+import Scrolling from "./components/scrolling/Scrolling";
 
-ReactDOM.render(<Hello />, document.getElementById("root"));
+ReactDOM.render(<Scrolling />, document.getElementById("root"));
