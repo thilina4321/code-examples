@@ -3,6 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 import MainRouter from "./MainRouter";
-import Scrolling from "./components/scrolling/Scrolling";
+import Select from "./components/scroll-select/Select";
 
-ReactDOM.render(<Scrolling />, document.getElementById("root"));
+ReactDOM.render(<Select />, document.getElementById("root"));
