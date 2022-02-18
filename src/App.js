@@ -1,36 +1,46 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function App() {
-  const [id, setId] = useState("");
-  const [name, setName] = useState("");
-  const dropdown = [
-    { id: 1, title: "one" },
-    { id: 2, title: "two" },
-    { id: 3, title: "three" },
-    { id: 4, title: "four" },
-    { id: 5, title: "five" },
-  ];
+const App = () => {
+  useEffect(() => {
+    fetch(
+      "https://qjgw0y2t09.execute-api.us-east-1.amazonaws.com/metadata?index=6317"
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }, []);
+  // javascript
+  const [names, setNames] = useState([{ name: "saman" }, { name: "kamal" }]);
+  const [customName, setcustomName] = useState("");
 
-  const onGetId = (e) => {
-    const id = e.target.value;
-    setId(id);
-    const findItem = dropdown.find((d) => d.id === +id);
-    setName(findItem.title);
+  const addName = () => {
+    setNames((prev) => [...prev, { name: customName }]);
   };
 
   return (
     <div>
-      <select onChange={onGetId}>
-        {dropdown.map((d) => (
-          <option key={d.id} value={d.id}>
-            {d.title}
-          </option>
-        ))}
-      </select>
-      {id && <p> Id : {id} </p>}
-      {name && <p> Name : {name} </p>}
+      <div className="section" style={{ display: "flex", margin: "20px" }}>
+        <p> Home </p>
+        <p> Contact us </p>
+        <p> About us </p>
+      </div>
+      Hello World
+      <input
+        value={customName}
+        onChange={(e) => setcustomName(e.target.value)}
+      />
+      {names.map((nam, index) => (
+        <p key={index}> {nam.name} </p>
+      ))}
+      <p onClick={addName}> Add Name </p>
     </div>
   );
-}
+};
 
 export default App;

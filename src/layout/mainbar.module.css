@@ -1,0 +1,22 @@
+.mainbar {
+  height: 2rem;
+  background-color: green;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (min-width:950px) {
+    .btn{
+        display: none;
+    }
+}
