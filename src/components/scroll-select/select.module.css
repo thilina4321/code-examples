@@ -1,0 +1,16 @@
+.section{
+    max-height: 150px;
+    overflow: auto;
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+.item{
+    border: 1px solid black;
+}
+
+.item:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
