@@ -1,19 +1,49 @@
 import React, { Fragment, useState } from "react";
+import { useEffect } from "react";
 import classes from "./select.module.css";
+
+const examp = [];
+
+  for (let i = 0; i < 30; i++) {
+    examp.push({
+      id: i,
+      title: `example ${i}`,
+      description: `description ${i}`,
+    });
+  }
+
+  // me code kotasa backend eka vidiyata hithapan
+
+  const myBackendCode = (limit, pageNumber)=>{
+    // mama data ganna patan ganna thena
+    // okkoma data 30k thiye kiyala hithamu
+    // limit eka pahaine, palaveni pituva nan one 0 idan 5 venakan 
+    const startPoint = (pageNumber - 1) * limit
+    // den mama mata ona data gana gannava
+    const neededData = []
+    for (let i = startPoint; i < array.length; i++) {
+      const element = array[i];
+      
+    }
+  }
 
 const Select = () => {
   const [item, setItem] = useState("");
-  const examples = [
-    { id: 1, title: `example 1`, description: "description 1" },
-    { id: 2, title: `example 2`, description: "description 2" },
-    { id: 3, title: `example 3`, description: "description 3" },
-    { id: 4, title: `example 4`, description: "description 4" },
-    { id: 5, title: `example 5`, description: "description 5" },
-  ];
+  const [examples, setExamples] = useState([])
+
+
+  useEffect(()=>{
+    // methanadi palaveni parata data load veddi mn data 5k illanava
+
+  }, [])
+
+  
   const onSelectItem = (id) => {
     const seleItm = examples.find((ex) => ex.id === id);
     setItem(seleItm);
   };
+
+
   return (
     <Fragment>
       <div className={classes.section}>
