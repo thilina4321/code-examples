@@ -3,6 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 import MainRouter from "./MainRouter";
-import Select from "./components/scroll-select/Select";
+import Array from "./array/Array";
 
-ReactDOM.render(<Select />, document.getElementById("root"));
+ReactDOM.render(<Array />, document.getElementById("root"));
