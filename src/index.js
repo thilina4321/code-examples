@@ -3,6 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 import MainRouter from "./MainRouter";
-import Array from "./array/Array";
+import Fetch from "./fetch/Fetch";
 
-ReactDOM.render(<Array />, document.getElementById("root"));
+ReactDOM.render(<Fetch />, document.getElementById("root"));
