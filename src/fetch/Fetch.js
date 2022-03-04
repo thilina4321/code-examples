@@ -15,7 +15,6 @@ const Fetch = () => {
 
   const fetchData = (index) => {
     const arrData = ["pid", "pid2", "pid3", "pid4"];
-
     return { data: arrData[index] };
   };
 
