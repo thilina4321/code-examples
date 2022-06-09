@@ -10,6 +10,7 @@ import "./footer/Footer.module.css"
 // import { Provider } from "react-redux";
 // import ViewOne from "./ViewOne";
 // import AsyncArray from "./components/AsyncArray";
+// game changer
 import Example from "./animations/Refresh";
 import A from "./Data";
 import Footer from './footer/Footer'
