@@ -1,34 +1,14 @@
-import { useState } from "react";
-
 function App() {
-  const [id, setId] = useState("");
-  const [name, setName] = useState("");
-  const dropdown = [
-    { id: 1, title: "one" },
-    { id: 2, title: "two" },
-    { id: 3, title: "three" },
-    { id: 4, title: "four" },
-    { id: 5, title: "five" },
-  ];
-
-  const onGetId = (e) => {
-    const id = e.target.value;
-    setId(id);
-    const findItem = dropdown.find((d) => d.id === +id);
-    setName(findItem.title);
-  };
+  
+  const values = ["value 1","value 2","value 3","value 4", "value 5"];
 
   return (
     <div>
-      <select onChange={onGetId}>
-        {dropdown.map((d) => (
-          <option key={d.id} value={d.id}>
-            {d.title}
-          </option>
-        ))}
-      </select>
-      {id && <p> Id : {id} </p>}
-      {name && <p> Name : {name} </p>}
+      { 
+        values.map(
+        (val, index)=>
+        (index !== 0 && index !== 1) && <div key={val}>  {val}  </div> ) 
+      }
     </div>
   );
 }
