@@ -15,6 +15,7 @@ import Example from "./animations/Refresh";
 import A from "./Data";
 import Footer from './footer/Footer'
 import OneSignal from './one-signal/OneSignal'
+import App from './App'
 
 
-ReactDOM.render(<OneSignal />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
