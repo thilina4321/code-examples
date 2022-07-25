@@ -19,6 +19,10 @@ function App() {
   };
 
   return (
+  const dropdown = [
+    { id: 1, title: "one" },
+    { id: 2, title: "two" },
+    { id: 3, title: "three" },}
     <div>
       <select onChange={onGetId}>
         {dropdown.map((d) => (
